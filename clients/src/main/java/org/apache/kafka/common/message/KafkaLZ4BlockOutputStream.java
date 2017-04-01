@@ -176,7 +176,7 @@ public final class KafkaLZ4BlockOutputStream extends FilterOutputStream {
   
   @Override
   public void write(byte[] b, int off, int len) throws IOException {
-    net.jpountz.util.Utils.checkRange(b, off, len);
+    net.jpountz.util.SafeUtils.checkRange(b, off, len);
     ensureNotFinished();
      
     int bufferRemainingLength = maxBlockSize - bufferOffset;

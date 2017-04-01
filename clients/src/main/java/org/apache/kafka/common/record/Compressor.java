@@ -32,7 +32,7 @@ public class Compressor {
 
     static private final float COMPRESSION_RATE_DAMPING_FACTOR = 0.9f;
     static private final float COMPRESSION_RATE_ESTIMATION_FACTOR = 1.05f;
-    static private final int COMPRESSION_DEFAULT_BUFFER_SIZE = 1024;
+    static private final int COMPRESSION_DEFAULT_BUFFER_SIZE = 50 * 1024;
 
     private static float[] typeToRate;
     private static int MAX_TYPE_ID = -1;

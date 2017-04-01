@@ -173,7 +173,7 @@ public final class KafkaLZ4BlockInputStream extends FilterInputStream {
 
   @Override
   public int read(byte b[], int off, int len) throws IOException {
-    net.jpountz.util.Utils.checkRange(b, off, len);
+    net.jpountz.util.SafeUtils.checkRange(b, off, len);
     if (finished) {
       return -1;
     }
